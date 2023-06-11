@@ -1,1 +1,1 @@
-​
+One funny thing I would like to add is that here in the ``` else if ``` ++i and i++ where game changing. i++ would return the value and then increment it while ++i increamented it and then returned the value.
