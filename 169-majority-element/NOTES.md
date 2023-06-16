@@ -1,3 +1,10 @@
+int majorityElement(vector<int>& nums) {
+int n = nums.size();
+int cnt = 0;
+int el=0;
+for(int i = 0; i<n; i++){
+if(cnt == 0){
+cnt = 1;
 el = nums[i];
 }
 else if(nums[i] == el){
@@ -11,6 +18,7 @@ return el;
 }
 };
 ```
+​
 if its not given that there's a majority element for sure then we have to write few more lines
 ```
 int cnt1=0;
