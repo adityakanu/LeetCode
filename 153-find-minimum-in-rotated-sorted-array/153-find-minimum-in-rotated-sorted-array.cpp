@@ -4,14 +4,14 @@ public:
         int n = nums.size();
         int mini = INT_MAX;
         int low = 0, high = n-1;
-        // have to redo the approach after seeing this test case .. .maybe have to compare sorted part and unsorted part separately
+        
         while (low<=high){
             int mid = (low+high)/2;
             
             mini = min(mini, nums[mid]);
             
             if(nums[low] <= nums[mid]){
-                mini = min(mini, nums[low]);
+                mini = min(mini, nums[low]);// this was the game changer as we know that the sorted portion if has the minimum then it most definately will be the low in case of left and mid incase of right.
                 low = mid + 1;
             }
             else{
