@@ -20,7 +20,7 @@ public:
     
     int minDays(vector<int>& bloomDay, int m, int k) {
         int n = bloomDay.size();
-        long long val = m * 1LL * k * 1LL;
+        long long val = m * 1LL * k * 1LL; // converted to long long 
         if(val > n) return -1;
         // int ans = 0;
         
@@ -38,6 +38,6 @@ public:
                 low = mid + 1;
             }
         }
-        return low;
+        return low; // since low and high move to opposite polarity
     }
 };
