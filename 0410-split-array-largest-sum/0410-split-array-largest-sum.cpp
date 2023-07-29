@@ -16,6 +16,8 @@ public:
         }
         return 0;
     }
+    
+    
     int splitArray(vector<int>& nums, int k) {
         int n = nums.size();
         
