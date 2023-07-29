@@ -4,24 +4,14 @@ public:
         if(s.length() != t.length()) return false;
         
         unordered_map<int, int> mp;
-        
-        for(int i = 0; i<s.length(); i++){
+        int n = s.length();
+        for(int i = 0; i<n; i++){
             mp[s[i]]++;
+            mp[t[i]]--;
         }
-        for(int i = 0; i<t.length(); i++){
-            if(mp.find(t[i]) != mp.end()){
-                auto it = mp.find(t[i]);
-                if((it->second) >= 1){
-                    mp[it->first]--;
-                }
-                else{
-                    return false;
-                }
-            }
-            else{
-                return false;
-            }
-            
+        
+        for(auto count : mp){
+            if(count.second != 0) return false;
         }
         return true;
     }
