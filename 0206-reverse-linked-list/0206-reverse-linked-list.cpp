@@ -10,19 +10,31 @@
  */
 class Solution {
 public:
+    
     ListNode* reverseList(ListNode* head) {
-        ListNode* prev_pt = nullptr;
-        ListNode* curr_pt = head;
-        ListNode* next_pt;
+//         // ---- iterative solution
+//         ListNode* prev_pt = nullptr;
+//         ListNode* curr_pt = head;
+//         ListNode* next_pt;
         
-        while(curr_pt != nullptr){
-            next_pt = curr_pt->next;
-            curr_pt->next = prev_pt;
+//         while(curr_pt != nullptr){
+//             next_pt = curr_pt->next;
+//             curr_pt->next = prev_pt;
             
-            prev_pt = curr_pt;
-            curr_pt = next_pt;
+//             prev_pt = curr_pt;
+//             curr_pt = next_pt;
+//         }
+//         head = prev_pt;
+//         return head;
+        
+        // ---- recursive solution
+        if(head == nullptr || head->next == nullptr){
+            return head;
         }
-        head = prev_pt;
-        return head;
+        
+        ListNode* node = reverseList(head->next);
+        head->next->next = head;
+        head->next = nullptr;
+        return node;
     }
 };
