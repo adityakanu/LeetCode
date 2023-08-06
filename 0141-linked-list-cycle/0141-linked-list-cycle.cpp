@@ -9,29 +9,24 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        // if head is NULL then return false;
-        if(head == NULL)
-            return false;
+        // Floyd's cycle-finding algorithm 
+        // tortoise hare algorithm
+        // the intuition is that fast will catch up to slow as it will decrease the distance between themseleves by one. and if they don't that means there's no cycle
         
-		// making two pointers fast and slow and assignning them to head
-        ListNode *fast = head;
-        ListNode *slow = head;
+        if(head == NULL) return false;
         
-		// till fast and fast-> next not reaches NULL
-		// we will increment fast by 2 step and slow by 1 step
+        ListNode* fast = head;
+        ListNode* slow = head;
+        
         while(fast != NULL && fast ->next != NULL)
         {
             fast = fast->next->next;
             slow = slow->next;
             
-			
-			// At the point if fast and slow are at same address
-			// this means linked list has a cycle in it.
             if(fast == slow)
                 return true;
         }
         
-		// if traversal reaches to NULL this means no cycle.
         return false;
     }
 };
