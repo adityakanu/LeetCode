@@ -2,7 +2,7 @@ class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
         int n = nums.size();
-        map<int,int> mp;
+        unordered_map<int,int> mp;
         int ans = 0;
         
         for(int& it:nums){
