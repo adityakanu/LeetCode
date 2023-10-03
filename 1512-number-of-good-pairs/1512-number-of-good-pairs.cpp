@@ -5,15 +5,15 @@ public:
         map<int,int> mp;
         int ans = 0;
         
-        for(auto it:nums){
-            mp[it]++;
+        for(int& it:nums){
+            ans+=mp[it]++;
         }
         
-        for(auto it:mp){
-            if(it.second >=2){
-                ans+= ((it.second)*(it.second-1))/2;
-            }
-        }
+        // for(auto it:mp){
+        //     if(it.second >=2){
+        //         ans+= ((it.second)*(it.second-1))/2;
+        //     }
+        // }
         return ans;
     }
 };
