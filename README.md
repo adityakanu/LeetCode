@@ -10,16 +10,16 @@ Collection of LeetCode questions Solved and with Notes
 
 ### :cook: Repo's Objective :
 
-<div>I am learning Competitive Programming via C++ on various Platforms like  
+<div>I am learning Optimal ways to solve algorithmic problems on the following platforms  
  
 
   <div id="badges">
   <a href="https://github.com/adityakanu/Codeforces">
     <img src="https://img.shields.io/badge/Codeforces-blue?style=for-the-badge&logo=Codeforces&logoColor=white" alt="Codeforces Badge"/>
   </a>
-  <a href="https://github.com/adityakanu/CodeChef">
+<!--   <a href="https://github.com/adityakanu/CodeChef">
     <img src="https://img.shields.io/badge/CodeChef-red?style=for-the-badge&logo=Codechef&logoColor=white" alt="CodeChef Badge"/>
-  </a>
+  </a> -->
   <a href="https://github.com/adityakanu/LeetCode">
     <img src="https://img.shields.io/badge/LeetCode-purple?style=for-the-badge&logo=Leetcode&logoColor=white" alt="LeetCode Badge"/>
   </a>
